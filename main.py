@@ -30,29 +30,30 @@ target_date = datetime.strptime("18.12.2025", "%d.%m.%Y").date()
 
 # Zielzeit auf Mitternacht setzen
 target_datetime = datetime.combine(target_date, datetime.min.time())
+current_time = datetime.now()
 
-# Aktuelles Datum und Zeit
+# Berechnung der verbleibenden Zeit
+remaining_time = target_datetime - current_time
+
+
+# Zeitanzeige
 while remaining_time.total_seconds() > 0:
+    # Aktuelles Datum und Zeit
     current_time = datetime.now()
     # Berechnung der verbleibenden Zeit
     remaining_time = target_datetime - current_time
+    
     # Zeitanzeige
-
     st.header("Verbleibende Zeit:")
     days = remaining_time.days
     hours, remainder = divmod(remaining_time.seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
     st.subheader(f"{days} Tage, {hours} Stunden, {minutes} Minuten, {seconds} Sekunden")
-        
+    
     time.sleep(1)
 
+
 st.subheader("Das war's! 🎉")
-
-
-
-
-
-
 
 
 
