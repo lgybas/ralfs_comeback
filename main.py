@@ -20,6 +20,7 @@ if st.button("Another day started"):
 import streamlit as st
 from datetime import datetime, timedelta
 import pandas as pd
+import time 
 
 # Titel der App
 st.title("Ralfs Comeback")
