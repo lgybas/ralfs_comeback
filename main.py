@@ -52,6 +52,7 @@ while remaining_time.total_seconds() > 0:
     st.subheader(f"{days} Tage, {hours} Stunden, {minutes} Minuten, {seconds} Sekunden")
     
     time.sleep(1)
+    st.experimental_rerun()
 
 
 st.subheader("Das war's! 🎉")
