@@ -26,7 +26,7 @@ import time
 st.title("Ralfs Comeback")
 
 # Benutzer wählt ein Ziel-Datum
-target_date = datetime.strptime("18.12.2025", "%d.%m.%Y").date()
+target_date = datetime.strptime("18.12.2024", "%d.%m.%Y").date()
 #st.date_input("Wähle das Ziel-Datum:", value=datetime.now().date())
 
 # Zielzeit auf Mitternacht setzen
@@ -52,7 +52,7 @@ with st.empty():
         st.subheader(f"{days} Tage, {hours} Stunden, {minutes} Minuten, {seconds} Sekunden")
         
         time.sleep(1)
-        
+
     st.subheader("Das war's! 🎉")
 
 
